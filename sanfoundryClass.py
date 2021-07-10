@@ -120,4 +120,5 @@ class copyit:
       pdf.output(f"{self.title}.pdf")
     except Exception as e:
       print(e)
+    return f"pdf Saved as {self.title}.pdf"
   
