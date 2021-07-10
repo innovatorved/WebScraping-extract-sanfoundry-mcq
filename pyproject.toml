@@ -5,5 +5,5 @@ name = "Project Crawl Sanfoundry"
 version = "1.0.1"
 [tool.poetry.dependencies]
 python = "^3.8"
-bs4 = "^0.0.1"
+bs4 = "^1.1.2"
 fpdf = "^1.7.2"

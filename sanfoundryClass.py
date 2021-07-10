@@ -111,11 +111,14 @@ class copyit:
 
     lineNum = 4
     for line in data:
-      try : 
-        pdf.cell(100 , 8 , txt = str(line).encode('latin-1', 'replace').decode('latin-1') , ln = lineNum , align="L")
-        lineNum = lineNum + 1
-      except:
-        pass
+      for x in range (0 , int(len(line)/90)+1):
+        d = line[:90]
+        line = line[90:]
+        try : 
+          pdf.cell(100 , 8 , txt = str(d).encode('latin-1', 'replace').decode('latin-1') , ln = lineNum , align="L")
+          lineNum = lineNum + 1
+        except:
+          pass
     try :
       pdf.output(f"{self.title}.pdf")
     except Exception as e:
