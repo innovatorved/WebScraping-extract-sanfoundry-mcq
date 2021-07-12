@@ -120,6 +120,9 @@ class copyit:
         except:
           pass
     try :
+      pdf.cell(100,8 ,txt="tool Cawl it " ,ln=lineNum ,align="L")
+      lineNum = lineNum+1
+      pdf.cell(100,8,txt="innovatorved" ,ln=lineNum ,align="L")
       pdf.output(f"{self.title}.pdf")
     except Exception as e:
       print(e)
